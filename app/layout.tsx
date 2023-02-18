@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import "../styles/globals.css";
 
@@ -10,13 +9,6 @@ export default function RootLayout({
     const header = (
         <header>
             <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
-                <Image
-                    src="/logo.png"
-                    width={40}
-                    height={40}
-                    className="mx-auto"
-                    alt={"logo"}
-                />
                 <Link href="/">
                     <h1 className="text-2xl text-white font-bold mt-4">
                         Dhruv's Blog
@@ -39,7 +31,44 @@ export default function RootLayout({
 
     return (
         <html>
-            <head />
+            <head>
+                <title>Stack-Dhruv - Official blog from Dhruvkumar Patel</title>
+                <meta
+                    name="title"
+                    content="Stack-Dhruv - Official blog from Dhruvkumar Patel"
+                />
+                <meta
+                    name="description"
+                    content="Stack-Dhruv is a tech blog created by an individual who is passionate about technology and wants to share his knowledge and insights with the world. The blog covers a wide range of topics related to technology, including software development, web development, mobile app development, artificial intelligence, machine learning, and more. "
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://stack-dhruv.tech/" />
+                <meta
+                    property="og:title"
+                    content="Stack-Dhruv - Official blog from Dhruvkumar Patel"
+                />
+                <meta
+                    property="og:description"
+                    content="Stack-Dhruv is a tech blog created by an individual who is passionate about technology and wants to share his knowledge and insights with the world. The blog covers a wide range of topics related to technology, including software development, web development, mobile app development, artificial intelligence, machine learning, and more. "
+                />
+                <meta property="og:image" content="/public/cover.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://stack-dhruv.tech/"
+                />
+                <meta
+                    property="twitter:title"
+                    content="Stack-Dhruv - Official blog from Dhruvkumar Patel"
+                />
+                <meta
+                    property="twitter:description"
+                    content="Stack-Dhruv is a tech blog created by an individual who is passionate about technology and wants to share his knowledge and insights with the world. The blog covers a wide range of topics related to technology, including software development, web development, mobile app development, artificial intelligence, machine learning, and more. "
+                />
+                <meta property="twitter:image" content="/public/cover.png" />
+            </head>
             <body>
                 <div className="mx-auto  max-w-3xl px-6">
                     {header}
